@@ -34,8 +34,8 @@ def main(argv):
 		i += 1
 
 if __name__ == "__main__":
-	curdate = date(2014, 11, 14).strftime("%a %b %d %X %Y %z -0400")
-	num_commits = randint(8, 12)
+	curdate = date(2014, 11, 15).strftime("%a %b %d %X %Y %z -0400")
+	num_commits = 2
 	for commit in range(0, num_commits):
 		subprocess.call("echo '" + curdate + str(randint(0, 1000000)) +"' > realwork.txt; git add -A; GIT_AUTHOR_DATE='" + curdate + "' GIT_COMMITTER_DATE='" + curdate + "' git commit -m 'update'; git push;", shell=True)
 		sleep(.5)
